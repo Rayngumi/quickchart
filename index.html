@@ -5,28 +5,47 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header>
     <h1>QuickChart</h1>
-    <div id="chart-input">
-      <label for="chart-type">Chart Type:</label>
-      <select id="chart-type">
-        <option value="bar">Bar</option>
-        <option value="line">Line</option>
-        <option value="pie">Pie</option>
-      </select>
-      <br>
-      <label for="labels">Labels:</label>
-      <input type="text" id="labels" placeholder="Enter labels separated by commas">
-      <br>
-      <label for="dataset">Dataset:</label>
-      <input type="text" id="dataset" placeholder="Enter dataset values separated by commas">
-      <br>
-      <button id="render-button">Render Chart</button>
-      <div id="error-message" class="error-message"></div>
-    </div>
+  </header>
 
-    <div id="chart-container">
-      <canvas id="chart"></canvas>
+  <main>
+    <div class="container">
+      <div id="chart-input" class="section">
+        <h2>Chart Input</h2>
+        <form id="chart-form">
+          <div class="form-group">
+            <label for="chart-type">Chart Type:</label>
+            <select id="chart-type" class="input-field">
+              <option value="bar">Bar</option>
+              <option value="line">Line</option>
+              <option value="pie">Pie</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="labels">Labels:</label>
+            <input type="text" id="labels" class="input-field" placeholder="Enter labels separated by commas">
+          </div>
+          <div class="form-group">
+            <label for="dataset">Dataset:</label>
+            <input type="text" id="dataset" class="input-field" placeholder="Enter dataset values separated by commas">
+          </div>
+          <button type="button" id="render-button" class="btn">Render Chart</button>
+          <div id="error-message" class="error-message"></div>
+        </form>
+      </div>
+
+      <div id="chart-container" class="section">
+        <h2>Chart</h2>
+        <canvas id="chart"></canvas>
+      </div>
     </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 QuickChart. All rights reserved.</p>
+  </footer>
+
   <script src="scripts/index.js"></script>
 </body>
 </html>
