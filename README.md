@@ -21,7 +21,7 @@ Git clone https://github.com/Rayngumi/quickchart
 ```
 
 # Live Link
-[Git](gh-pages link)
+https://rayngumi.github.io/quickchart/
 
 ## Technologies used
 HTML
