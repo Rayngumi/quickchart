@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>QuickChart</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>QuickChart</h1>
+    <div id="chart-input">
+      <label for="chart-type">Chart Type:</label>
+      <select id="chart-type">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+      </select>
+      <br>
+      <label for="labels">Labels:</label>
+      <input type="text" id="labels" placeholder="Enter labels separated by commas">
+      <br>
+      <label for="dataset">Dataset:</label>
+      <input type="text" id="dataset" placeholder="Enter dataset values separated by commas">
+      <br>
+      <button id="render-button">Render Chart</button>
+      <div id="error-message" class="error-message"></div>
+    </div>
+
+    <div id="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+  <script src="/scripts/index.js"></script>
+</body>
+</html>
