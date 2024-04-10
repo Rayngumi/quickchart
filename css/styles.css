@@ -58,3 +58,14 @@ footer {
   margin-top: 50px;
   color: #777;
 }
+
+#chart-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#chart {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
