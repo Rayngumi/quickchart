@@ -1,48 +1,48 @@
-body {
+body, h1, h2, p, button, input, select {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: white;
+  background-color: #f4f4f4;
   padding: 20px;
 }
 
-#chart-input, #chart-container {
+.container {
+  max-width: 800px;
   margin: 0 auto;
-  max-width: 600px;
 }
 
-h1 {
+header, main, footer {
   text-align: center;
   margin-bottom: 20px;
 }
 
-#chart-input {
-  background-color: white;
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+.section {
+  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-select {
-  width: 100%;
-  padding: 8px;
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid white;
+  border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
 }
 
-button {
-  width: 100%;
+.btn {
+  width: calc(100% - 20px);
   padding: 10px;
-  background-color: blueviolet;
+  background-color: #6a5acd;
   color: white;
   border: none;
   border-radius: 3px;
@@ -52,4 +52,9 @@ button {
 .error-message {
   color: red;
   margin-top: 10px;
+}
+
+footer {
+  margin-top: 50px;
+  color: #777;
 }
