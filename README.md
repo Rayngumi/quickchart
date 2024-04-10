@@ -16,7 +16,7 @@ Git
 
 ### Installation instruction
 ```
-Git clone https://github.com/Rayngumi
+Git clone https://github.com/Rayngumi/quickchart
 
 ```
 
