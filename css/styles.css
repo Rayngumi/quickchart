@@ -1,52 +1,56 @@
-body, h1, h2, p, button, input, select {
+body {
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  background-image: url(../images/background.png);
 }
 
-body {
-  background-image: url('../images/background.jpg');
-  background-color: #f4f4f4;
-  padding: 20px;
+header {
+  background-color: #6a5acd;
+  color: white;
+  text-align: center;
+  padding: 5px;
 }
 
 .container {
-  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1500px;
   margin: 0 auto;
-}
-
-header, main, footer {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h1, h2 {
-  margin-bottom: 10px;
+  padding: 20px;
 }
 
 .section {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 48%;
 }
 
 .input-field {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
 }
 
 .btn {
-  width: calc(100% - 20px);
-  padding: 10px;
   background-color: #6a5acd;
-  color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #5d4ac3;
 }
 
 .error-message {
@@ -55,17 +59,19 @@ h1, h2 {
 }
 
 footer {
-  margin-top: 50px;
-  color: #000;
+  background-color: #6a5acd;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
 }
 
-#chart-wrapper {
-  width: 100%;
-  overflow-x: auto;
+#chart-container {
+  background-color: #f5f5f5;
 }
 
 #chart {
-  width: 100%;
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
