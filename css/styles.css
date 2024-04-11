@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   background-image: url(../images/background.png);
-  z-index: 1;
 }
 
 header {
