@@ -8,14 +8,11 @@ body {
   line-height: 1.6;
 }
 
-header, .section, footer {
-  padding: 20px 0;
-}
-
 header, footer {
-  background-color: #6a5acd;
+  background-color: #4e78a7;
   color: white;
   text-align: center;
+  padding: 10px 0; 
 }
 
 .container {
@@ -55,11 +52,11 @@ header, footer {
 }
 
 .input-field:focus {
-  border-color: #6a5acd;
+  border-color: #4e78a7;
 }
 
 .btn {
-  background-color: #6a5acd;
+  background-color: #4e78a7;
   border: none;
   border-radius: 5px;
   color: white;
@@ -71,7 +68,7 @@ header, footer {
 }
 
 .btn:hover {
-  background-color: #5d4ac3;
+  background-color: #325274;/
 }
 
 .error-message, #comment-error-message {
