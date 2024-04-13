@@ -3,24 +3,37 @@ body {
   margin: 0;
   padding: 0;
   background-image: url(../images/background.png);
-  background-size: cover;
+  background-size: 50%;
   font-size: 16px;
   line-height: 1.6;
 }
 
-header, footer {
+header {
+  background-color: #4e78a7;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+footer {
   background-color: #4e78a7;
   color: white;
   text-align: center;
-  padding: 10px 0; 
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-wrap: wrap;
-  max-width: auto;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -30,15 +43,22 @@ header, footer {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  width: calc(50% - 20px);
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
   margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.chart-section {
+  width: calc(50% - 20px);
+}
+
+.comment-section {
+  width: 100%;
+}
+
+.comment-section form {
+  margin-top: 20px;
 }
 
 .input-field {
@@ -68,7 +88,7 @@ header, footer {
 }
 
 .btn:hover {
-  background-color: #325274;/
+  background-color: #325274;
 }
 
 .error-message, #comment-error-message {
@@ -76,8 +96,11 @@ header, footer {
   margin-top: 10px;
 }
 
+#chart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 #chart {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
+  max-width: 100%;
 }

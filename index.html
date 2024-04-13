@@ -12,49 +12,48 @@
   </header>
 
   <main>
-    <div class="container">
-      <div class="section" id="chart-input">
-        <h2>Chart Input</h2>
-        <form id="chart-form">
-          <div class="form-group">
-            <label for="chart-type">Chart Type:</label>
-            <select id="chart-type" class="input-field">
-              <option value="bar">Bar</option>
-              <option value="line">Line</option>
-              <option value="pie">Pie</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="labels">Labels:</label>
-            <input type="text" id="labels" class="input-field" placeholder="Enter labels separated by commas">
-          </div>
-          <div class="form-group">
-            <label for="dataset">Dataset:</label>
-            <input type="text" id="dataset" class="input-field" placeholder="Enter dataset values separated by commas">
-          </div>
-          <button type="button" id="render-button" class="btn">Render Chart</button>
-          <div id="error-message" class="error-message"></div>
-        </form>
-      </div>
-
-      <div class="section" id="chart-container">
-        <h2>Chart</h2>
+    <div class="container" id="main-container">
+      <div class="section chart-section" id="chart-container">
+        <div id="chart-input">
+          <p>Fill out the form below to create a custom chart.</p>
+          <form id="chart-form">
+            <div class="form-group">
+              <label for="chart-type">Chart Type:</label>
+              <select id="chart-type" class="input-field">
+                <option value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option value="pie">Pie</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="labels">Labels:</label>
+              <input type="text" id="labels" class="input-field" placeholder="Enter labels separated by commas">
+            </div>
+            <div class="form-group">
+              <label for="dataset">Dataset:</label>
+              <input type="text" id="dataset" class="input-field" placeholder="Enter dataset values separated by commas">
+            </div>
+            <button type="button" id="render-button" class="btn">Render Chart</button>
+            <div id="error-message" class="error-message"></div>
+          </form>
+        </div>
         <div id="chart-wrapper">
           <canvas id="chart"></canvas>
         </div>
       </div>
 
-      <div class="section" id="comment-section">
-        <h2>Comments</h2>
-        <form id="comment-form">
-          <div class="form-group">
-            <label for="comment">Your Comment:</label>
-            <textarea id="comment" class="input-field" rows="4" placeholder="Enter your comment here"></textarea>
-          </div>
-          <button type="button" id="submit-comment" class="btn">Submit Comment</button>
-          <div id="comment-error-message" class="error-message"></div>
-        </form>
-        <div id="comment-container"></div>
+      <div class="section comment-section" id="comment-container">
+        <div id="comment-section">
+          <p>Leave your thoughts or feedback below:</p>
+          <form id="comment-form">
+            <div class="form-group">
+              <textarea id="comment" class="input-field" rows="4" placeholder="Enter your comment here"></textarea>
+            </div>
+            <button type="button" id="submit-comment" class="btn">Submit Comment</button>
+            <div id="comment-error-message" class="error-message"></div>
+          </form>
+          <div id="comment-display"></div>
+        </div>
       </div>
     </div>
   </main>
