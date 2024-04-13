@@ -33,8 +33,7 @@ footer p {
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -43,22 +42,28 @@ footer p {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  width: 100%;
-  max-width: 600px;
+  width: calc(100% - 40px);
+  max-width: 800px;
   margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .chart-section {
-  width: calc(50% - 20px);
-}
-
-.comment-section {
   width: 100%;
 }
 
-.comment-section form {
-  margin-top: 20px;
+.chart-container {
+  width: 100%;
+}
+
+.comment-section {
+  width: calc(100% - 40px);
+  max-width: 800px;
+}
+
+#chart {
+  width: 100%;
+  height: auto;
 }
 
 .input-field {
@@ -84,7 +89,7 @@ footer p {
   font-size: 16px;
   padding: 12px 20px;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: calc(100% - 24px);
 }
 
 .btn:hover {
@@ -94,13 +99,4 @@ footer p {
 .error-message, #comment-error-message {
   color: red;
   margin-top: 10px;
-}
-
-#chart-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-#chart {
-  max-width: 100%;
 }

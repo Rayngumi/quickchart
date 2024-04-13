@@ -51,7 +51,7 @@ function renderChart() {
         canvas.height = img.height;
         ctx.drawImage(img, 0, 0);
 
-        document.getElementById('chart-wrapper').style.display = 'block';
+        canvas.style.display = 'block';
       };
       img.src = imageUrl;
 
