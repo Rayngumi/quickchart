@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const renderButton = document.getElementById('render-button');
   renderButton.addEventListener('click', renderChart);
-
-  const submitCommentButton = document.getElementById('submit-comment');
-  submitCommentButton.addEventListener('click', (event) => submitComment(event));
 });
 
 function renderChart() {
   const chartType = document.getElementById('chart-type').value;
   const labelsInput = document.getElementById('labels').value;
   const datasetInput = document.getElementById('dataset').value;
+
+  const errorMessage = document.getElementById('error-message');
 
   if (!labelsInput || !datasetInput) {
     displayErrorMessage('Please enter labels and dataset values');
@@ -18,6 +17,11 @@ function renderChart() {
 
   const labels = labelsInput.split(',');
   const dataset = datasetInput.split(',').map(Number);
+
+  if (!validateDataset(dataset)) {
+    displayErrorMessage('Dataset values must be numeric');
+    return;
+  }
 
   const chartConfig = {
     type: chartType,
@@ -52,34 +56,14 @@ function renderChart() {
         ctx.drawImage(img, 0, 0);
 
         canvas.style.display = 'block';
+        clearErrorMessage();
       };
       img.src = imageUrl;
-
-      clearErrorMessage();
     })
     .catch(error => {
       console.error('Error rendering chart:', error);
       displayErrorMessage(error.message);
     });
-}
-
-function submitComment(event) {
-  event.preventDefault();
-
-  const comment = document.getElementById('comment').value;
-
-  if (!comment) {
-    displayCommentErrorMessage('Please enter a comment');
-    return;
-  }
-
-  const commentContainer = document.getElementById('comment-container');
-  const newComment = document.createElement('div');
-  newComment.textContent = comment;
-  commentContainer.appendChild(newComment);
-
-  clearCommentErrorMessage();
-  document.getElementById('comment').value = '';
 }
 
 function displayErrorMessage(message) {
@@ -92,12 +76,6 @@ function clearErrorMessage() {
   errorMessage.textContent = '';
 }
 
-function displayCommentErrorMessage(message) {
-  const commentErrorMessage = document.getElementById('comment-error-message');
-  commentErrorMessage.textContent = message;
-}
-
-function clearCommentErrorMessage() {
-  const commentErrorMessage = document.getElementById('comment-error-message');
-  commentErrorMessage.textContent = '';
+function validateDataset(dataset) {
+  return dataset.every(value => !isNaN(value));
 }
