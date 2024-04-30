@@ -1,14 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const renderButton = document.getElementById('render-button');
-  renderButton.addEventListener('click', renderChart);
-});
+const renderButton = document.getElementById('render-button');
+renderButton.addEventListener('click', renderChart);
 
 function renderChart() {
   const chartType = document.getElementById('chart-type').value;
   const labelsInput = document.getElementById('labels').value;
   const datasetInput = document.getElementById('dataset').value;
-
-  const errorMessage = document.getElementById('error-message');
 
   if (!labelsInput || !datasetInput) {
     displayErrorMessage('Please enter labels and dataset values');
